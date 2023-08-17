@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Islamy_Mohamed"
         tools:targetApi="31">
         <activity
-            android:name=".TextOfSoraActivity"
+            android:name=".ui.activitySoraDetails.TextOfSoraActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Home_Screen.HomeActivity"
