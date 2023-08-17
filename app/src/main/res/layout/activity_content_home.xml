@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_home">
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_nav"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btn_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconSize="30dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/color_select_icon_of_btn_nav"
+        app:itemTextColor="@color/color_select_icon_of_btn_nav"
+        android:background="@color/colorGold"
+        app:menu="@menu/menu_btn_nav"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
