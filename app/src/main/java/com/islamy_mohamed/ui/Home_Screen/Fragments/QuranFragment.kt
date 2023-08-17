@@ -2,16 +2,13 @@ package com.islamy_mohamed.ui.Home_Screen.Fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Telephony.Mms.Intents
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.islamy_mohamed.R
-import com.islamy_mohamed.TextOfSoraActivity
-import com.islamy_mohamed.ui.Home_Screen.HomeActivity
+import com.islamy_mohamed.ui.activitySoraDetails.TextOfSoraActivity
 
 class QuranFragment : Fragment() {
     override fun onCreateView(
@@ -139,14 +136,18 @@ class QuranFragment : Fragment() {
             "الفلق",
             "الناس"
         )
-        var RV : RecyclerView
-        var adapterRv : AdapterForRVQuranFragment
+        val RV : RecyclerView
+        val adapterRv : AdapterForRVQuranFragment
         super.onViewCreated(view, savedInstanceState)
         RV = view.findViewById(R.id.RV_Quran)
         adapterRv = AdapterForRVQuranFragment(ArSuras)
         RV.adapter = adapterRv
         adapterRv.onItemClickListener = object :AdapterForRVQuranFragment.OnItemClickListener{
             override fun OnItemClick(position: Int, name: String) {
+                val intent = Intent(context , TextOfSoraActivity::class.java)
+                 intent.putExtra("indix",position+1)
+                 intent.putExtra("nameOfSora",name)
+                startActivity(intent)
 
             }
 
