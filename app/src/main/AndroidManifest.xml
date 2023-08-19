@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Islamy_Mohamed"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activityHadethDetails.HadethDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activitySoraDetails.TextOfSoraActivity"
             android:exported="false" />
         <activity
