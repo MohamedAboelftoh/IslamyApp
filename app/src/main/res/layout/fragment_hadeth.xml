@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Home_Screen.Fragments.HadethFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/HeadImgHadeth"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/img_hadeth"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <View
+        android:id="@+id/line1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hadeth"/>
-
-</FrameLayout>
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/HeadImgHadeth"
+        android:background="@color/colorGold"
+        />
+    <TextView
+        android:id="@+id/text_headOfHadeth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="الاحاديث"
+        android:padding="8dp"
+        android:textSize="20sp"
+        />
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/text_headOfHadeth"
+        android:background="@color/colorGold"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Hadeth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_rv_hadeth"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
