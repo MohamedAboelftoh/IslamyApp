@@ -31,18 +31,18 @@ class SebhaFragment : Fragment() {
             imgOfSepha.rotation = imgOfSepha.rotation +(360/33)
             numberofTaspeh++
             textNumOfTaspeh.setText(""+numberofTaspeh)
-            if(numberofTaspeh == 34 && btnTaspeh.text.toString().equals("سبحان الله")) {
+            if(numberofTaspeh == 33 && btnTaspeh.text.toString().equals("سبحان الله")) {
                 textNumOfTaspeh.setText("0")
                 numberofTaspeh = 0
                 btnTaspeh.setText("الحمد لله")
             }
-            else if (numberofTaspeh == 34 && btnTaspeh.text.toString().equals("الحمد لله"))
+            else if (numberofTaspeh == 33 && btnTaspeh.text.toString().equals("الحمد لله"))
             {
                 textNumOfTaspeh.setText("0")
                 numberofTaspeh = 0
                 btnTaspeh.setText("الله اكبر")
             }
-            else if(numberofTaspeh == 34 && btnTaspeh.text.toString().equals("الله اكبر")){
+            else if(numberofTaspeh == 33 && btnTaspeh.text.toString().equals("الله اكبر")){
                 textNumOfTaspeh.setText("0")
                 numberofTaspeh = 0
                 btnTaspeh.setText("سبحان الله")

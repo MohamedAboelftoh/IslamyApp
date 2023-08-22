@@ -9,8 +9,8 @@
   <androidx.cardview.widget.CardView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      app:contentPadding="8dp"
       android:elevation="22dp"
+      style="@style/cardStyle"
       app:layout_constraintHeight_percent="0.9"
       app:layout_constraintWidth_percent="0.9"
       app:layout_constraintTop_toTopOf="parent"
@@ -24,13 +24,11 @@
     android:id="@+id/RV_Details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     android:orientation="vertical"
     tools:listitem="@layout/item_text_sora"
     />
-
-
-
 
   </androidx.cardview.widget.CardView>
 

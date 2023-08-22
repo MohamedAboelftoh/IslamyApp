@@ -11,6 +11,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text=""
+        style="@style/textOfSoraAndHadethStyle"
         android:gravity="center"
         android:textSize="25sp"
         android:layout_margin="10dp"

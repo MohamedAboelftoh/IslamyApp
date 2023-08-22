@@ -11,7 +11,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/imgsepha"
+       style="@style/headSebhaStyle"
         android:layout_marginStart="35dp"
         />
     <ImageView
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="-25dp"
-        android:src="@drawable/body_of_sebha"
+        style="@style/bodySebhaStyle"
         />
 
     <TextView
@@ -47,6 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="300dp"
         android:text="0"
+        style="@style/textCountSephaStyle"
         android:layout_margin="10dp"
         android:gravity="center"
         android:background="@drawable/shape_of_num_taspeh"
@@ -62,6 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="300dp"
         android:text="سبحان الله"
+        style="@style/btnCountSephaStyle"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textSize="25sp"

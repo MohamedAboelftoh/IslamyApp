@@ -5,4 +5,9 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="colorGold">#B7935F</color>
     <color name="colorGold2">#C8B396</color>
+    <color name="colorBlueDark">#141A2E</color>
+    <color name="colorYello">#FACC1D</color>
+    <color name="transParent">#00FFFFFF</color>
+    <color name="colorBlueDark2">#80141A2E</color>
+
 </resources>

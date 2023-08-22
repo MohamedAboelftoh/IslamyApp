@@ -4,6 +4,41 @@
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/colorGold</item>
     </style>
-
+    <style name="HomeActivity">
+        <item name="android:background">@drawable/back_ground_light</item>
+    </style>
+    <style name="Btn_Nav">
+        <item name="android:background">@color/colorGold</item>
+        <item name="itemIconSize">30dp</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemIconTint">@color/color_select_icon_of_btn_nav</item>
+        <item name="itemTextColor">@color/color_select_icon_of_btn_nav</item>
+    </style>
+    <style name="backIconStyle">
+        <item name="android:tint">@color/black</item>
+    </style>
+    <style name="cardStyle">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+    <style name="textOfSoraAndHadethStyle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="btnCountSephaStyle">
+        <item name="android:backgroundTint">@color/colorGold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="textCountSephaStyle">
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">@null</item>
+    </style>
+    <style name="bodySebhaStyle">
+        <item name="android:src">@drawable/body_of_sebha</item>
+    </style>
+    <style name="headSebhaStyle">
+        <item name="android:src">@drawable/imgsepha</item>
+    </style>
+    <style name="splachStyle">
+        <item name="android:background">@drawable/splach_img</item>
+    </style>
     <style name="Theme.Islamy_Mohamed" parent="Base.Theme.Islamy_Mohamed" />
 </resources>
