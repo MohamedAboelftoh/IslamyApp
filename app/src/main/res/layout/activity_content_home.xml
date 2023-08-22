@@ -18,11 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:itemIconSize="30dp"
-        app:itemActiveIndicatorStyle="@null"
-        app:itemIconTint="@color/color_select_icon_of_btn_nav"
-        app:itemTextColor="@color/color_select_icon_of_btn_nav"
-        android:background="@color/colorGold"
+        style="@style/Btn_Nav"
         app:menu="@menu/menu_btn_nav"
         />
 

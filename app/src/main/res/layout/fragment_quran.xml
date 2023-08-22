@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Home_Screen.Fragments.QuranFragment">
+    <Button
+        android:id="@+id/mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        />
 <ImageView
     android:id="@+id/imgFragmentQuran"
     android:layout_width="wrap_content"
