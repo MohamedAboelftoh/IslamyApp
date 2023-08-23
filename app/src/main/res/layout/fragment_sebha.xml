@@ -11,7 +11,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-       style="@style/headSebhaStyle"
+        style="@style/headSebhaStyle"
         android:layout_marginStart="35dp"
         />
     <ImageView
@@ -29,14 +29,14 @@
     <TextView
         android:id="@+id/num_taspeh"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bodyOfSepha"
         android:text="عدد التسبيحات"
+        app:layout_constraintBottom_toTopOf="@id/num_Of_taspeh"
         android:textSize="25sp"
         android:textStyle="bold"
-
         />
     <TextView
         android:id="@+id/num_Of_taspeh"
@@ -45,10 +45,9 @@
         app:layout_constraintTop_toBottomOf="@id/num_taspeh"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="300dp"
         android:text="0"
         style="@style/textCountSephaStyle"
-        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_taspeh"
         android:gravity="center"
         android:background="@drawable/shape_of_num_taspeh"
         android:textSize="25sp"
@@ -60,11 +59,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/num_Of_taspeh"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="300dp"
         android:text="سبحان الله"
         style="@style/btnCountSephaStyle"
-        android:layout_margin="10dp"
         android:gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
