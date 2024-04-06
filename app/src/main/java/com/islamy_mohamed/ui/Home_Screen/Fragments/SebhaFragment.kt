@@ -6,46 +6,44 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import com.islamy_mohamed.R
+import com.islamy_mohamed.databinding.FragmentSebhaBinding
 
 class SebhaFragment : Fragment() {
+    private lateinit var viewBinding : FragmentSebhaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sebha, container, false)
+    ): View {
+        viewBinding = FragmentSebhaBinding.inflate(inflater,container,false)
+        return viewBinding.root
     }
     @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var textNumOfTaspeh : TextView = view.findViewById(R.id.num_Of_taspeh)
-        var btnTaspeh : Button = view.findViewById(R.id.btn_taspeh)
-        var imgOfSepha : ImageView = view.findViewById(R.id.bodyOfSepha)
-        var numberofTaspeh : Int = Integer.parseInt(textNumOfTaspeh.text.toString())
-        btnTaspeh.setOnClickListener {
-            imgOfSepha.rotation = imgOfSepha.rotation +(360/33)
-            numberofTaspeh++
-            textNumOfTaspeh.setText(""+numberofTaspeh)
-            if(numberofTaspeh == 33 && btnTaspeh.text.toString().equals("سبحان الله")) {
-                textNumOfTaspeh.setText("0")
-                numberofTaspeh = 0
-                btnTaspeh.setText("الحمد لله")
-            }
-            else if (numberofTaspeh == 33 && btnTaspeh.text.toString().equals("الحمد لله"))
-            {
-                textNumOfTaspeh.setText("0")
-                numberofTaspeh = 0
-                btnTaspeh.setText("الله اكبر")
-            }
-            else if(numberofTaspeh == 33 && btnTaspeh.text.toString().equals("الله اكبر")){
-                textNumOfTaspeh.setText("0")
-                numberofTaspeh = 0
-                btnTaspeh.setText("سبحان الله")
+        onBtnSebhaClick()
+    }
+
+    private fun onBtnSebhaClick() {
+        var numberOfTaspeh: Int = Integer.parseInt(viewBinding.numOfTaspeh.text.toString())
+        viewBinding.btnTaspeh.setOnClickListener {
+            viewBinding.bodyOfSepha.rotation = viewBinding.bodyOfSepha.rotation + (360 / 33)
+            numberOfTaspeh++
+            viewBinding.numOfTaspeh.text = "" + numberOfTaspeh
+            if (numberOfTaspeh == 33 && viewBinding.btnTaspeh.text.toString()
+                    .equals("سبحان الله")
+            ) {
+                viewBinding.numOfTaspeh.text = "0"
+                numberOfTaspeh = 0
+                viewBinding.btnTaspeh.text = "الحمد لله"
+            } else if (numberOfTaspeh == 33 && viewBinding.btnTaspeh.text.toString() == "الحمد لله") {
+                viewBinding.numOfTaspeh.text = "0"
+                numberOfTaspeh = 0
+                viewBinding.btnTaspeh.text = "الله اكبر"
+            } else if (numberOfTaspeh == 33 && viewBinding.btnTaspeh.text.toString() == "الله اكبر") {
+                viewBinding.numOfTaspeh.text = "0"
+                numberOfTaspeh = 0
+                viewBinding.btnTaspeh.text = "سبحان الله"
             }
         }
     }
