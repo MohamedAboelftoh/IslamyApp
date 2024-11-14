@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/notification_body"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/radio_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="media name"
+        android:textSize="18sp"
+        android:gravity="start"
+        android:layout_weight="3"
+        android:layout_gravity="center_vertical" />
+
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="0dp"
+        android:tag="start"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5"
+        android:src="@drawable/ic_next" />
+
+    <ImageView
+        android:id="@+id/start_radio"
+        android:layout_width="0dp"
+        android:tag="start"
+        android:layout_height="30dp"
+        android:layout_weight=".5"
+        android:visibility="gone"
+        app:tint="@color/colorGold"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_pause" />
+    <ImageView
+        android:id="@+id/pause_radio"
+        android:layout_width="0dp"
+        android:tag="start"
+        android:layout_height="30dp"
+        android:layout_weight=".5"
+        android:visibility="visible"
+        app:tint="@color/colorGold"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_start_radio" />
+
+    <ImageView
+        android:id="@+id/next_radio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="0dp"
+        android:tag="start"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5"
+        app:tint="@color/colorGold"
+        android:src="@drawable/ic_close" />
+</LinearLayout>

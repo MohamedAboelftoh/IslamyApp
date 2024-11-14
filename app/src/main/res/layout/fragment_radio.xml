@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Home_Screen.Fragments.RadioFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".persentation.ui.home.fragments.radio.RadioFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gide_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+    <ImageView
+        android:id="@+id/img_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/radio_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gide_line" />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Radio" />
+        android:id="@+id/izaa_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/start"
+        android:text="اذاعة القرأن الكريم"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        />
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            app:layout_constraintTop_toBottomOf="@id/izaa_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/pause"
+            android:layout_marginTop="20dp"
+            />
+<!--        <ImageView-->
+<!--            android:id="@+id/start"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:tag="start"-->
+<!--            android:layout_height="30dp"-->
+<!--            app:tint="@color/colorGold"-->
+<!--            android:src="@drawable/ic_start_radio"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/izaa_tv"-->
+<!--            app:layout_constraintStart_toEndOf="@id/back"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/next"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            />-->
+    <ProgressBar
+        android:id="@+id/loading_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorGold"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/izaa_tv" />
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            app:layout_constraintTop_toBottomOf="@id/izaa_tv"
+            app:layout_constraintStart_toEndOf="@id/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
